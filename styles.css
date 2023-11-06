@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgb(26, 26, 26);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 6px;
+  font-weight: bold;
+}
+
+.logo {
+  height: 25px;
+  width: 25px;
+}
+
+.navbar {
+  min-height: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 25px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-link {
+  transition: color 0.1s ease;
+  color: white;
+}
+
+.nav-link:not(.join-link):not(.contact-link):hover {
+  color: rgb(165, 165, 165);
+}
+
+.nav-link.join-link:hover {
+  color: rgb(165, 165, 165);
+  border: 1px solid rgb(165, 165, 165);
+}
+
+.nav-link.contact-link:hover {
+  color: rgb(165, 165, 165);
+  background-color: rgb(172, 14, 59);
+}
+
+.join-link {
+  border: 1px solid rgb(249, 249, 249);
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.contact-link {
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-color: rgb(249, 19, 84);
+  color: rgb(253, 251, 251);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 12.5px;
+  height: 1.5px;
+  margin: 2.5px auto;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 300px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+}
+
+.nav-menu {
+  @media (max-width: 300px) {
+    position: fixed;
+    left: -100%;
+    top: 20px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.nav-item {
+  margin: 5px 0;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-menu.active .nav-item {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
