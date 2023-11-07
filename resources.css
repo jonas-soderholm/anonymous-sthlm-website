@@ -1,67 +1,37 @@
 .resources {
   display: flex;
+  flex-direction: row;
   background-color: rgb(26, 26, 26);
   justify-content: center;
   align-items: center;
   width: 100%;
-  position: absolute;
-  top: 100vh;
+  height: 2px;
+  padding: 2px; /* Adjust padding as needed */
   z-index: 2;
 }
 
 .resourcesHeader {
   font-size: 15px;
-  top: 70px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px;
-}
-
-/* .moviesHeader {
-  display: flex;
+  padding: 0px;
   background-color: rgb(26, 26, 26);
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: absolute;
-  top: calc(100vh + 30px);
-  z-index: 2;
-  color: white;
-  font-size: 10px;
-  padding: 10px;
-  text-align: center;
-  order: 1;
-} */
-
-.moviesHeaderText {
-  font-size: 10px;
-  top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0;
+  top: -10px; /* Adjust the value to move the text up or down as needed */
 }
 
 .movies {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  background-color: rgb(26, 26, 26);
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 40px;
-  position: absolute;
-  top: calc(100vh);
-  /* top: calc(100vh + 30px);  */
   gap: 20px;
+  background-color: rgb(26, 26, 26);
+  padding: 50px;
+  margin-top: -60px; /* Adjust this value as needed to move the background up */
 }
 
 .movie-box {
   width: 120px;
   height: 110px;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +49,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
-  margin-bottom: 10px;
   transition: transform 0.7s;
 }
 
@@ -88,7 +57,6 @@
   font-size: 5px;
   text-align: center;
   padding: 8px;
-  margin-top: -10px;
   font-weight: bold;
 }
 
