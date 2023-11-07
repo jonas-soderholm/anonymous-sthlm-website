@@ -95,7 +95,7 @@ a {
   background-color: rgb(216, 3, 3);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .hamburger {
     display: block;
   }
@@ -112,7 +112,7 @@ a {
 }
 
 .nav-menu {
-  @media (max-width: 500px) {
+  @media (max-width: 400px) {
     position: fixed;
     left: -500%;
     top: 0;

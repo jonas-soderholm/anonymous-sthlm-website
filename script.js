@@ -22,7 +22,7 @@ navLinks.forEach((link) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth >= 500 && hamburger.classList.contains("active")) {
+  if (window.innerWidth >= 400 && hamburger.classList.contains("active")) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   }

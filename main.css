@@ -21,14 +21,15 @@
 }
 
 .BackgroundImageMain {
-  background-color: black; /* Start with a black background */
-  background-image: none; /* Start without the background image */
+  background-color: black;
+  background-image: url("images/AnonymousBackgroundDarker.png");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  height: 100vh; /* Adjust if necessary */
   width: 100%;
-  transition: background-color 1s ease-in-out; /* Transition for the background color */
+  height: 75vh; /* Set the height to cover the entire viewport */
+  position: relative;
+  z-index: 1;
 }
 
 /* Add a class that applies the background image */
