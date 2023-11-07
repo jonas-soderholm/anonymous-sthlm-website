@@ -14,14 +14,7 @@ navLinks.forEach((link) => {
     event.preventDefault();
 
     console.log(`Clicked on "${link.textContent}" link`);
-    if (window.innerWidth > 500 && hamburger.classList.contains("active")) {
-      // If it is, then remove the 'active' class from navMenu and hamburger to hide them
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-
-    if (window.innerWidth < 500) {
-      // If it is, then remove the 'active' class from navMenu and hamburger to hide them
+    if (hamburger.classList.contains("active")) {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     }
@@ -29,9 +22,7 @@ navLinks.forEach((link) => {
 });
 
 window.addEventListener("resize", () => {
-  // Check if the window width is greater than 400px and if the nav-menu is active
-  if (window.innerWidth > 500 && hamburger.classList.contains("active")) {
-    // If it is, then remove the 'active' class from navMenu and hamburger to hide them
+  if (window.innerWidth >= 500 && hamburger.classList.contains("active")) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   }
