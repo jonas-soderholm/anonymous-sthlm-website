@@ -8,7 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header>
@@ -31,6 +32,35 @@
         </div>
       </nav>
     </header>
+    <div class="BackgroundImageMain" id="backgroundImage">
+      <img
+        src="images/AnonymousBackgroundDarker.png"
+        alt="Background"
+        style="
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        "
+      />
+      <div
+        class="overlay"
+        id="overlay"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: black;
+        "
+      ></div>
+      <div class="logoAnimation">
+        <a href="#" class="letterAnimation" id="animatedLetter">A</a>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

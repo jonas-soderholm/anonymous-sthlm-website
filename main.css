@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.BackgroundImageMain {
+  background-color: black; /* Start with a black background */
+  background-image: none; /* Start without the background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust if necessary */
+  width: 100%;
+  transition: background-color 1s ease-in-out; /* Transition for the background color */
+}
+
+/* Add a class that applies the background image */
+.BackgroundImageMain.show-image {
+  background-color: transparent; /* Fade to transparent to reveal the background image */
+  background-image: url("images/AnonymousBackgroundDarker.png"); /* Replace with your actual image */
+}
+
+.logoAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* This will center the .logoAnimation div perfectly */
+}
+
+.letterAnimation {
+  color: rgb(255, 254, 254);
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.logo-mask {
+  opacity: 0;
+  transition: opacity 1s ease-in; /* Adjust the duration as needed */
+  width: 50px; /* Set the width as needed */
+  height: 50px; /* Set the height as needed */
+}
+
+/* Trigger the fade in when the logo-mask class is added to an element */
+.logo-mask {
+  animation: fadeInLogo 1s forwards;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+  }
+}

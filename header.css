@@ -7,6 +7,8 @@
 
 header {
   background-color: rgb(26, 26, 26);
+  position: relative; /* This ensures that header has its own stacking context */
+  z-index: 10; /* A z-index higher than the background image and overlay ensures it will be on top */
 }
 
 li {
@@ -87,7 +89,7 @@ a {
   margin: 2.5px auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: white;
+  background-color: rgb(249, 19, 84);
 }
 
 @media (max-width: 300px) {
