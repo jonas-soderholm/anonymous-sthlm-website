@@ -5,6 +5,21 @@
   box-sizing: border-box;
 }
 
+.mainButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  gap: 15px;
+  opacity: 0; /* Set initial opacity to 0 to hide buttons */
+  transition: opacity 1s ease-in-out; /* Transition effect for the fade-in */
+}
+
 .BackgroundImageMain {
   background-color: black; /* Start with a black background */
   background-image: none; /* Start without the background image */
@@ -36,9 +51,9 @@
 }
 
 .letterAnimation {
-  color: rgb(255, 254, 254);
+  color: rgb(216, 3, 3);
   text-decoration: none;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
 }
 
