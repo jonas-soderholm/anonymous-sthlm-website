@@ -29,9 +29,9 @@
 }
 
 .movie-box {
-  width: 120px;
-  height: 110px;
-  background-color: #ffffff;
+  width: 90px;
+  height: 80x;
+  background-color: rgb(216, 3, 3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,11 +53,12 @@
 }
 
 .movie-text {
-  background-color: #ffffff;
+  background-color: rgb(216, 3, 3);
   font-size: 5px;
   text-align: center;
   padding: 8px;
   font-weight: bold;
+  color: white;
 }
 
 .movie-box:hover {

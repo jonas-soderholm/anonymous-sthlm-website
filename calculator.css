@@ -1,14 +1,71 @@
-.green-box {
-  clear: both;
-  display: block;
-  font-family: "Arimo", sans-serif;
-  direction: rtl;
-  text-align: right;
-  float: right;
-  width: 250px;
-  border-radius: 15px;
-  padding: 15px;
-  margin-top: 7px;
-  border: 7px solid #fbdd63;
-  background-color: white;
+.veganCalculatorHeader,
+.input-group {
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: rgb(209, 19, 19);
+  color: white;
+}
+
+.veganCalculatorHeader h1 {
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.calculateButton {
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(209, 19, 19);
+}
+
+.veganCalculatorHeader,
+.veganResult h2 {
+  font-size: 7px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(209, 19, 19);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.input-group label {
+  font-size: 5px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(209, 19, 19);
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.input input.time {
+  width: 40px; /* Adjust as needed */
+  height: 15px; /* Adjust as needed */
+  margin-top: 0px;
+  border-radius: 2px;
+  border: 0px solid rgb(0, 0, 0);
+}
+
+.time:focus {
+  outline: none;
+  /* Optional: Add a custom focus style to maintain accessibility */
+  border: 2px solid #00f4ff; /* Example: light blue border */
+}
+
+/* Optional: Adjust the width of the input fields if necessary */
+.time {
+  width: 60px; /* Adjust as needed */
+  /* Other styles */
 }
