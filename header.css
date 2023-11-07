@@ -7,8 +7,8 @@
 
 header {
   background-color: rgb(26, 26, 26);
-  position: relative; /* This ensures that header has its own stacking context */
-  z-index: 10; /* A z-index higher than the background image and overlay ensures it will be on top */
+  position: relative;
+  z-index: 10;
 }
 
 li {

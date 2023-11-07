@@ -16,8 +16,8 @@
   bottom: 0;
   z-index: 2;
   gap: 15px;
-  opacity: 0; /* Set initial opacity to 0 to hide buttons */
-  transition: opacity 1s ease-in-out; /* Transition effect for the fade-in */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .BackgroundImageMain {
@@ -27,15 +27,14 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   width: 100%;
-  height: 75vh; /* Set the height to cover the entire viewport */
+  height: 75vh;
   position: relative;
   z-index: 1;
 }
 
-/* Add a class that applies the background image */
 .BackgroundImageMain.show-image {
-  background-color: transparent; /* Fade to transparent to reveal the background image */
-  background-image: url("images/AnonymousBackgroundDarker.png"); /* Replace with your actual image */
+  background-color: transparent;
+  background-image: url("images/AnonymousBackgroundDarker.png");
 }
 
 .logoAnimation {
@@ -45,10 +44,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* This will center the .logoAnimation div perfectly */
+  transform: translate(-50%, -50%);
 }
 
 .letterAnimation {
@@ -60,12 +56,11 @@
 
 .logo-mask {
   opacity: 0;
-  transition: opacity 1s ease-in; /* Adjust the duration as needed */
-  width: 50px; /* Set the width as needed */
-  height: 50px; /* Set the height as needed */
+  transition: opacity 1s ease-in;
+  width: 50px;
+  height: 50px;
 }
 
-/* Trigger the fade in when the logo-mask class is added to an element */
 .logo-mask {
   animation: fadeInLogo 1s forwards;
 }

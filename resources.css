@@ -1,12 +1,12 @@
 .resources {
   display: flex;
-  background-color: rgb(222, 19, 19);
+  background-color: rgb(26, 26, 26);
   justify-content: center;
   align-items: center;
   width: 100%;
   position: absolute;
-  top: 100vh; /* Set the top position to be at the bottom of the viewport */
-  z-index: 2; /* Set z-index higher than .BackgroundImageMain */
+  top: 100vh;
+  z-index: 2;
 }
 
 .resourcesHeader {
@@ -18,16 +18,21 @@
   padding: 10px;
 }
 
-.moviesHeader {
+/* .moviesHeader {
   display: flex;
-  background-color: rgb(222, 19, 19);
+  background-color: rgb(26, 26, 26);
   justify-content: center;
   align-items: center;
   width: 100%;
   position: absolute;
   top: calc(100vh + 30px);
-  z-index: 2; /* Set z-index higher than .BackgroundImageMain */
-}
+  z-index: 2;
+  color: white;
+  font-size: 10px;
+  padding: 10px;
+  text-align: center;
+  order: 1;
+} */
 
 .moviesHeaderText {
   font-size: 10px;
@@ -40,34 +45,67 @@
 
 .movies {
   display: flex;
-  flex-direction: row; /* Stack elements vertically (top to bottom) */
-  background-color: rgba(15, 43, 222, 0.516);
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(26, 26, 26);
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 50px;
+  padding: 40px;
   position: absolute;
-  top: calc(100vh + 30px); /* Adjust the top value as needed */
+  top: calc(100vh);
+  /* top: calc(100vh + 30px);  */
   gap: 20px;
 }
 
-.moviesHeader {
-  color: white;
-  font-size: 10px;
-  padding: 10px;
-  text-align: center; /* Center the text horizontally */
-  order: 1; /* Move .moviesHeader above the .movie-boxes */
-}
-
 .movie-box {
-  width: 100px; /* Adjust the width as needed */
-  height: 120px; /* Adjust the height as needed */
-  background-color: #fff; /* Set the background color */
-  margin: 10px 0; /* Add margin between boxes vertically */
+  width: 120px;
+  height: 110px;
+  background-color: #fff;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000; /* Add border or styling as needed */
+  border: 0px solid #000;
   border-radius: 5px;
-  order: 2; /* Make sure .movie-boxes come after .moviesHeader */
+  order: 2;
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.movie-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+  transition: transform 0.7s;
+}
+
+.movie-text {
+  background-color: #ffffff;
+  font-size: 5px;
+  text-align: center;
+  padding: 8px;
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+.movie-box:hover {
+  cursor: grab;
+  transform: scale(1.02);
+}
+
+.movie-box:hover img {
+  cursor: grab;
+  transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+  .movie-box {
+    width: 110px;
+    height: 110px;
+    margin: 0px;
+  }
 }
