@@ -1,7 +1,8 @@
 .veganCalculatorHeader,
 .input-group {
   text-align: center;
-  margin-bottom: 0px;
+  padding-bottom: 5px;
+  margin-bottom: -7px;
   background-color: rgb(209, 19, 19);
   color: white;
 }
@@ -98,9 +99,10 @@
 }
 
 .modal-content {
+  position: relative; /* Add this line */
   background-color: #3e3e3e;
   margin: 20% auto;
-  padding: 20px;
+  padding: 10px;
   max-width: 300px;
   box-sizing: border-box;
   display: flex;
@@ -118,7 +120,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   row-gap: 0px;
-  column-gap: 70px;
+  column-gap: 50px;
+  margin-bottom: 20px;
 }
 
 .headerSaved {
@@ -126,7 +129,7 @@
   flex-direction: column;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-top: 7px;
   background-color: #3e3e3e;
   color: white;
   width: 100%;
@@ -134,7 +137,7 @@
   text-align: center;
   margin-bottom: 10px;
   margin-top: -10px;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .saved {
@@ -151,4 +154,20 @@
 
 #headerSavedText {
   font-size: 8px;
+}
+
+.close {
+  position: absolute; /* Position the close button absolutely within .modal-content */
+  top: 0px; /* Align it to the top */
+  right: 10px; /* Align it to the right */
+  color: #aaa; /* Light grey color */
+  font-size: 28px; /* Large font size for the 'X' character */
+  font-weight: bold; /* Bold font weight for visibility */
+}
+
+.close:hover,
+.close:focus {
+  color: #7f7f7f; /* Change color on hover/focus for better user interaction */
+  text-decoration: none;
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
 }

@@ -14,10 +14,14 @@ navLinks.forEach((link) => {
     event.preventDefault();
 
     console.log(`Clicked on "${link.textContent}" link`);
+
     if (hamburger.classList.contains("active")) {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     }
+
+    var element = document.getElementById("years");
+    element.scrollIntoView({ behavior: "smooth" });
   });
 });
 
@@ -86,9 +90,13 @@ var forest = document.getElementById("forest");
 var grain = document.getElementById("grain");
 var co2 = document.getElementById("co2");
 
-btn.onclick = function () {
-  modal.style.display = "block";
+var span = document.getElementsByClassName("close")[0];
 
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+btn.onclick = function () {
   var yearsInput = document.getElementById("years").value;
   var monthsInput = document.getElementById("months").value;
   var daysInput = document.getElementById("days").value;
@@ -108,6 +116,13 @@ btn.onclick = function () {
   daysInput = daysInput * 1;
 
   daysTotal = yearsInput + monthsInput + daysInput;
+
+  if (daysTotal == 0) {
+    return;
+  }
+
+  modal.style.display = "block";
+
   calculateSaved(daysTotal);
 };
 
