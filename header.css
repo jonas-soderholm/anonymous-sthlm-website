@@ -61,7 +61,7 @@ a {
 
 .nav-link.contact-link:hover {
   color: rgb(165, 165, 165);
-  background-color: rgb(170, 3, 3);
+  background-color: rgb(209, 19, 19);
 }
 
 .heroButton {
@@ -74,7 +74,7 @@ a {
 .contact-link {
   padding: 4px 8px;
   border-radius: 2px;
-  background-color: rgb(216, 3, 3);
+  background-color: rgb(209, 19, 19);
   color: rgb(253, 251, 251);
   font-weight: bold;
   text-decoration: none;
@@ -92,7 +92,7 @@ a {
   margin: 2.5px auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: rgb(216, 3, 3);
+  background-color: rgb(209, 19, 19);
 }
 
 @media (max-width: 400px) {

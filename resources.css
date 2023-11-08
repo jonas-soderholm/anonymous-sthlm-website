@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
   height: 2px;
-  padding: 2px; /* Adjust padding as needed */
+  padding: 2px;
   z-index: 2;
 }
 
@@ -14,7 +14,7 @@
   font-size: 15px;
   padding: 0px;
   background-color: rgb(26, 26, 26);
-  top: -10px; /* Adjust the value to move the text up or down as needed */
+  top: -10px;
 }
 
 .movies {
@@ -24,14 +24,15 @@
   justify-content: center;
   gap: 20px;
   background-color: rgb(26, 26, 26);
-  padding: 50px;
-  margin-top: -60px; /* Adjust this value as needed to move the background up */
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-top: -60px;
 }
 
 .movie-box {
   width: 90px;
-  height: 80x;
-  background-color: rgb(216, 3, 3);
+  height: 60px;
+  background-color: rgb(209, 19, 19);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,7 +54,7 @@
 }
 
 .movie-text {
-  background-color: rgb(216, 3, 3);
+  background-color: rgb(209, 19, 19);
   font-size: 5px;
   text-align: center;
   padding: 8px;
@@ -71,9 +72,9 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .movie-box {
-    width: 110px;
+    width: 130px;
     height: 110px;
     margin: 0px;
   }

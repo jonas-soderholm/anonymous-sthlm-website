@@ -13,8 +13,18 @@
 
 .calculateButton {
   align-items: center;
-  gap: 10px;
-  background-color: rgb(209, 19, 19);
+  gap: 0px;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 0 5px 0 5px;
+  border-radius: 2px;
+  color: white;
+  cursor: grab;
+}
+
+.calculateButton:hover {
+  color: rgb(200, 200, 200);
+  border: 1px solid rgb(200, 200, 200);
 }
 
 .veganCalculatorHeader,
@@ -26,6 +36,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   background-color: rgb(209, 19, 19);
@@ -33,26 +44,29 @@
 
 .input-group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 5px;
+  margin-top: 10px;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+}
+
+.input-button {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
   margin-bottom: 10px;
   margin-top: 5px;
 }
 
-.input-group label {
-  font-size: 5px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  background-color: rgb(209, 19, 19);
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-}
-
 .input input.time {
-  width: 40px; /* Adjust as needed */
-  height: 15px; /* Adjust as needed */
+  width: 40px;
+  height: 15px;
   margin-top: 0px;
   border-radius: 2px;
   border: 0px solid rgb(0, 0, 0);
@@ -60,12 +74,9 @@
 
 .time:focus {
   outline: none;
-  /* Optional: Add a custom focus style to maintain accessibility */
-  border: 2px solid #00f4ff; /* Example: light blue border */
+  border: 2px solid #00f4ff;
 }
 
-/* Optional: Adjust the width of the input fields if necessary */
 .time {
-  width: 60px; /* Adjust as needed */
-  /* Other styles */
+  width: 60px;
 }
