@@ -4,7 +4,7 @@
   margin-bottom: -7px;
   background-color: rgb(209, 19, 19);
   color: white;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .input-group {
@@ -13,19 +13,20 @@
   /* margin-bottom: -7px; */
   background-color: rgb(209, 19, 19);
   color: white;
-  padding: 10px 0 10px 0;
+  padding: 25px 10px 25px 10px;
 }
 
 .calculateButton {
   align-items: center;
   gap: 0px;
   background-color: transparent;
-  border: 1px solid rgb(255, 255, 255);
-  padding: 0 5px 0 5px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px 25px 10px 25px;
   border-radius: 2px;
   color: white;
   cursor: grab;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 .calculateButton:hover {
@@ -35,11 +36,11 @@
 
 .veganCalculatorHeader,
 .veganResult h1 {
-  font-size: 6px;
+  font-size: 12px;
 }
 
 .veganCalculatorHeader a {
-  font-size: 15px;
+  font-size: 35px;
 }
 
 .input {
@@ -48,7 +49,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   background-color: rgb(209, 19, 19);
 }
 
@@ -63,7 +64,7 @@
   margin-bottom: 5px;
   text-align: center;
   width: 100%;
-  font-size: 12px;
+  font-size: 24px;
 }
 
 .input-button {
@@ -75,11 +76,13 @@
 }
 
 .input input.time {
-  width: 40px;
-  height: 15px;
+  width: 80px;
+  height: 35px;
   margin-top: 0px;
   border-radius: 2px;
   border: 0px solid rgb(0, 0, 0);
+  font-size: 25px;
+  padding: 5px;
 }
 
 .time:focus {
@@ -104,15 +107,15 @@
   background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   z-index: 9999;
-  font-size: 10px;
+  font-size: 25px;
 }
 
 .modal-content {
   position: relative;
   background-color: #3e3e3e;
   margin: 20% auto;
-  padding: 10px;
-  max-width: 300px;
+  padding: 25px;
+  max-width: 700px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -130,7 +133,7 @@
   flex-wrap: wrap;
   row-gap: 0px;
   column-gap: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .headerSaved {
@@ -144,8 +147,8 @@
   width: 100%;
   align-items: center;
   text-align: center;
-  margin-bottom: 10px;
-  margin-top: -10px;
+  margin-bottom: 35px;
+  margin-top: 0px;
   font-size: 60px;
 }
 
@@ -162,7 +165,7 @@
 }
 
 #headerSavedText {
-  font-size: 8px;
+  font-size: 20px;
 }
 
 .close {
@@ -170,7 +173,7 @@
   top: 0px;
   right: 10px;
   color: #aaa;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
 }
 

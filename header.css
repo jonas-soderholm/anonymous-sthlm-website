@@ -39,7 +39,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 70px;
+  gap: 40px;
 }
 
 .nav-link {
@@ -56,7 +56,7 @@ a {
 }
 
 .mainButtons :hover {
-  border: 1px solid rgb(165, 165, 165);
+  border: 2px solid rgb(165, 165, 165);
 }
 
 .nav-link.contact-link:hover {
@@ -65,14 +65,14 @@ a {
 }
 
 .heroButton {
-  border: 1px solid rgb(249, 249, 249);
-  padding: 3px 8px;
+  border: 2px solid rgb(249, 249, 249);
+  padding: 6px 16px;
   border-radius: 2px;
   background-color: transparent;
 }
 
 .contact-link {
-  padding: 4px 8px;
+  padding: 8px 12px;
   border-radius: 2px;
   background-color: rgb(209, 19, 19);
   color: rgb(253, 251, 251);
@@ -87,15 +87,15 @@ a {
 
 .bar {
   display: block;
-  width: 12.5px;
-  height: 1.5px;
-  margin: 2.5px auto;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   background-color: rgb(209, 19, 19);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 900px) {
   .hamburger {
     display: block;
   }
@@ -104,15 +104,15 @@ a {
     opacity: 0;
   }
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(4px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
 .nav-menu {
-  @media (max-width: 400px) {
+  @media (max-width: 900px) {
     position: fixed;
     left: -500%;
     top: 0;
