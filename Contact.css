@@ -1,0 +1,52 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: rgb(26, 26, 26);
+  padding-top: 0px;
+  padding-bottom: 30px;
+  column-gap: 100px;
+  row-gap: 30px;
+}
+
+.join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 26, 26);
+  font-size: 10px;
+  color: white;
+  padding-bottom: 0px;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100px;
+  margin-top: -25px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(26, 26, 26);
+  font-size: 10px;
+  color: white;
+  margin-top: -23px;
+}
+
+#instagram {
+  background-color: blue;
+}
+
+.contactHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 26, 26);
+  font-size: 15px;
+  color: white;
+  flex-basis: 100%;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}

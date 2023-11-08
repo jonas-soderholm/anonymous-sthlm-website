@@ -1,15 +1,19 @@
-.veganCalculatorHeader,
-.input-group {
+.veganCalculatorHeader {
   text-align: center;
   padding-bottom: 5px;
   margin-bottom: -7px;
   background-color: rgb(209, 19, 19);
   color: white;
+  padding-top: 20px;
 }
 
-.veganCalculatorHeader h1 {
-  font-size: 15px;
-  padding-top: 10px;
+.input-group {
+  text-align: center;
+  padding-bottom: 5px;
+  /* margin-bottom: -7px; */
+  background-color: rgb(209, 19, 19);
+  color: white;
+  padding: 10px 0 10px 0;
 }
 
 .calculateButton {
@@ -21,6 +25,7 @@
   border-radius: 2px;
   color: white;
   cursor: grab;
+  margin-bottom: 10px;
 }
 
 .calculateButton:hover {
@@ -29,8 +34,12 @@
 }
 
 .veganCalculatorHeader,
-.veganResult h2 {
-  font-size: 7px;
+.veganResult h1 {
+  font-size: 6px;
+}
+
+.veganCalculatorHeader a {
+  font-size: 15px;
 }
 
 .input {
@@ -85,7 +94,7 @@
 /* Prompt */
 
 .modal {
-  display: none; /* Hide modal initially */
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -99,7 +108,7 @@
 }
 
 .modal-content {
-  position: relative; /* Add this line */
+  position: relative;
   background-color: #3e3e3e;
   margin: 20% auto;
   padding: 10px;
@@ -110,9 +119,9 @@
   align-items: center;
   border-radius: 2px;
 
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .list-container {
@@ -157,17 +166,17 @@
 }
 
 .close {
-  position: absolute; /* Position the close button absolutely within .modal-content */
-  top: 0px; /* Align it to the top */
-  right: 10px; /* Align it to the right */
-  color: #aaa; /* Light grey color */
-  font-size: 28px; /* Large font size for the 'X' character */
-  font-weight: bold; /* Bold font weight for visibility */
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #7f7f7f; /* Change color on hover/focus for better user interaction */
+  color: #7f7f7f;
   text-decoration: none;
-  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  cursor: pointer;
 }
