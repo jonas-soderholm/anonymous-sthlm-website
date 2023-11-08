@@ -75,14 +75,75 @@ document.addEventListener("DOMContentLoaded", (event) => {
   animateLetter();
 });
 
-//Prompt calculator
+//Calculator
 
 var modal = document.getElementById("myModal");
 var btn = document.querySelector(".calculateButton");
 
+var animals = document.getElementById("animals");
+var water = document.getElementById("water");
+var forest = document.getElementById("forest");
+var grain = document.getElementById("grain");
+var co2 = document.getElementById("co2");
+
 btn.onclick = function () {
   modal.style.display = "block";
+
+  var yearsInput = document.getElementById("years").value;
+  var monthsInput = document.getElementById("months").value;
+  var daysInput = document.getElementById("days").value;
+
+  if (yearsInput == "") {
+    yearsInput = 0;
+  }
+  if (monthsInput == "") {
+    monthsInput = 0;
+  }
+  if (daysInput == "") {
+    daysInput = 0;
+  }
+
+  yearsInput = yearsInput * 365;
+  monthsInput = monthsInput * 30;
+  daysInput = daysInput * 1;
+
+  daysTotal = yearsInput + monthsInput + daysInput;
+  calculateSaved(daysTotal);
 };
+
+function calculateSaved(days) {
+  console.log(days);
+
+  var waterResult = 4163.9 * daysTotal;
+  var forestResult = 2.8 * daysTotal;
+  var co2Result = 9.1 * daysTotal;
+  var grainResult = 18.1 * daysTotal;
+  //animals is one per day
+
+  animals.textContent = "Animal lives: " + days;
+
+  water.textContent =
+    "Litres of water: " +
+    Math.round(waterResult).toLocaleString("en-US", {
+      maximumFractionDigits: 2,
+    });
+
+  forest.textContent =
+    "m2 of forest: " +
+    Math.round(forestResult).toLocaleString("en-US", {
+      maximumFractionDigits: 2,
+    });
+
+  co2.textContent =
+    "Kg of CO2: " +
+    Math.round(co2Result).toLocaleString("en-US", { maximumFractionDigits: 2 });
+
+  grain.textContent =
+    "Kg of grain: " +
+    Math.round(grainResult).toLocaleString("en-US", {
+      maximumFractionDigits: 2,
+    });
+}
 
 window.onclick = function (event) {
   if (event.target == modal) {
