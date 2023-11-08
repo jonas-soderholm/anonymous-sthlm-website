@@ -30,8 +30,8 @@
 }
 
 .movie-box {
-  width: 90px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background-color: rgb(209, 19, 19);
   display: flex;
   flex-direction: column;
