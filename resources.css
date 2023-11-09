@@ -49,8 +49,8 @@
 }
 
 .movie-box {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   background-color: rgb(76, 72, 72);
   display: flex;
   flex-direction: column;

@@ -44,8 +44,9 @@
 .letterAnimation {
   color: rgb(209, 19, 19);
   text-decoration: none;
-  font-size: 100px;
+  font-size: calc(4vw + 20px);
   font-weight: bold;
+  line-height: 1;
 }
 
 @keyframes fadeInLogo {

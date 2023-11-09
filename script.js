@@ -76,33 +76,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const animatedLetter = document.getElementById("animatedLetter");
   const letters = "ANONYMOUS".split("");
   let currentLetterIndex = 0;
-  let delayAfterA = 700;
 
   const animateLetter = () => {
-    if (currentLetterIndex < letters.length) {
-      animatedLetter.textContent = letters[currentLetterIndex++];
-      if (animatedLetter.textContent === "A") {
-        setTimeout(animateLetter, delayAfterA);
-      } else {
-        setTimeout(animateLetter, 175);
-      }
-    } else {
-      setTimeout(() => {
-        typeOutSTHLM();
-      }, 150);
+    animatedLetter.textContent = letters[currentLetterIndex++];
+
+    setTimeout(() => {
+      typeOutSTHLM();
+    }, 500);
+
+    setTimeout(() => {
       overlay.style.transition = "opacity 1.3s ease-in-out";
       overlay.style.opacity = "0";
-    }
+    }, 1350);
   };
 
   const typeOutSTHLM = () => {
-    const wordToSpell = "STHLM";
+    const wordToSpell = "ANONYMOUS";
     let index = 0;
     const typeOutLetters = () => {
       if (index < wordToSpell.length) {
         animatedLetter.textContent += wordToSpell[index];
         index++;
-        setTimeout(typeOutLetters, 125);
+        setTimeout(typeOutLetters, 100);
       }
     };
     animatedLetter.textContent = "";
@@ -112,7 +107,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   setTimeout(() => {
     const mainButtons = document.querySelector(".mainButtons");
     mainButtons.style.opacity = 1;
-  }, 3000);
+  }, 1350);
 
   animateLetter();
 });
