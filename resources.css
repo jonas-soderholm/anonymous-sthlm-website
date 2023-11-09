@@ -51,13 +51,11 @@
 .movie-box {
   width: 250px;
   height: 250px;
-  background-color: rgb(209, 19, 19);
+  background-color: rgb(76, 72, 72);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   align-items: center;
-  border: 0px solid #000;
   border-radius: 5px;
   order: 2;
   transition: transform 0.2s;
@@ -68,12 +66,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px 5px 0 0;
   transition: transform 0.7s;
 }
 
 .movie-text {
-  background-color: rgb(209, 19, 19);
+  background-color: rgb(76, 72, 72);
   font-size: 25x;
   text-align: center;
   padding: 25px;

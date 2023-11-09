@@ -30,7 +30,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: rgb(26, 26, 26);
-  font-size: 25px;
+
   color: white;
   margin-top: -23px;
 }
@@ -49,4 +49,10 @@
   flex-basis: 100%;
   padding-top: 50px;
   padding-bottom: 0px;
+}
+
+.contact {
+  @media (max-width: 900px) {
+    font-size: 15px;
+  }
 }

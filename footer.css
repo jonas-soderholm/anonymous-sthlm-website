@@ -1,6 +1,8 @@
 .footer {
   display: flex;
   align-items: center;
+  justify-content: center;
+
   height: 80px;
   background-color: rgb(26, 26, 26);
   background-image: linear-gradient(

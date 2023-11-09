@@ -20,8 +20,33 @@ navLinks.forEach((link) => {
       navMenu.classList.toggle("active");
     }
 
-    var element = document.getElementById("years");
-    element.scrollIntoView({ behavior: "smooth" });
+    switch (link.textContent.trim()) {
+      case "Resources":
+        sectionSelector = ".movies";
+        break;
+      case "Why vegan?":
+        sectionSelector = ".movies";
+        break;
+      case "Contact":
+        sectionSelector = ".contact-container";
+        break;
+      case "About":
+        sectionSelector = ".contact-container";
+        break;
+      case "Join us":
+        sectionSelector = ".contact-container";
+        break;
+      default:
+        console.error("No section defined for: " + link.textContent);
+        return; // Exit the function if no case matches
+    }
+
+    const sectionToScroll = document.querySelector(sectionSelector);
+    if (sectionToScroll) {
+      sectionToScroll.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("Section not found for: " + link.textContent);
+    }
   });
 });
 
@@ -32,6 +57,18 @@ window.addEventListener("resize", () => {
     console.log("SMALL");
   }
 });
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (hamburger.classList.contains("active")) {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      console.log("Menu closed due to scroll down");
+    }
+  },
+  false
+);
 
 //Startup animation
 document.addEventListener("DOMContentLoaded", (event) => {
