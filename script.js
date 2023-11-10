@@ -1,4 +1,5 @@
-//Header
+// ------------------- NAVBAR -------------------
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -20,6 +21,9 @@ navLinks.forEach((link) => {
       navMenu.classList.toggle("active");
     }
 
+    let sectionSelector = "";
+    let isAboutPage = window.location.pathname.includes("about.html");
+
     switch (link.textContent.trim()) {
       case "Resources":
         sectionSelector = ".movies";
@@ -30,24 +34,40 @@ navLinks.forEach((link) => {
       case "Contact":
         sectionSelector = ".contact-container";
         break;
-      case "About":
-        sectionSelector = ".contact-container";
-        break;
       case "Join us":
         sectionSelector = ".contact-container";
         break;
+      case "About us":
+        window.location.href = "about.html";
+        return;
       default:
         console.error("No section defined for: " + link.textContent);
-        return; // Exit the function if no case matches
+        return;
     }
 
-    const sectionToScroll = document.querySelector(sectionSelector);
-    if (sectionToScroll) {
-      sectionToScroll.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.error("Section not found for: " + link.textContent);
+    if (isAboutPage) {
+      sessionStorage.setItem("scrollToSection", sectionSelector);
+      window.location.href = "index.html";
+    } else if (sectionSelector) {
+      const sectionToScroll = document.querySelector(sectionSelector);
+      if (sectionToScroll) {
+        sectionToScroll.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.error("Section not found for: " + link.textContent);
+      }
     }
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sectionToScroll = sessionStorage.getItem("scrollToSection");
+  if (sectionToScroll) {
+    sessionStorage.removeItem("scrollToSection"); // Clear the flag
+    const section = document.querySelector(sectionToScroll);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 });
 
 window.addEventListener("resize", () => {
@@ -70,7 +90,8 @@ window.addEventListener(
   false
 );
 
-//Startup animation
+// ------------------- STARTUP ANIMATION -------------------
+
 document.addEventListener("DOMContentLoaded", (event) => {
   const overlay = document.getElementById("overlay");
   const animatedLetter = document.getElementById("animatedLetter");
@@ -112,7 +133,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   animateLetter();
 });
 
-//Calculator
+// ------------------- CALCULATOR -------------------
 
 var modal = document.getElementById("myModal");
 var btn = document.querySelector(".calculateButton");
