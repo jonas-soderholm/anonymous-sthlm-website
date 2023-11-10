@@ -138,3 +138,17 @@ a {
   gap: 15px;
   padding: 5px;
 }
+
+/* Sticky */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(23, 23, 23);
+  z-index: 1000;
+}
+
+body {
+  padding-top: 75px;
+}
