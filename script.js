@@ -63,9 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionToScroll = sessionStorage.getItem("scrollToSection");
   if (sectionToScroll) {
     sessionStorage.removeItem("scrollToSection"); // Clear the flag
+
     const section = document.querySelector(sectionToScroll);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: "auto" });
     }
   }
 });
@@ -74,7 +75,6 @@ window.addEventListener("resize", () => {
   if (window.innerWidth >= 900 && hamburger.classList.contains("active")) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    console.log("SMALL");
   }
 });
 
@@ -84,7 +84,6 @@ window.addEventListener(
     if (hamburger.classList.contains("active")) {
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
-      console.log("Menu closed due to scroll down");
     }
   },
   false
