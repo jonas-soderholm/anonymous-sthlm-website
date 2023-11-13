@@ -22,3 +22,16 @@ body {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto; /* Center the table horizontally */
+}
+th,
+td {
+  /* border: 1px solid rgb(187, 168, 168); */
+  background-color: blue;
+  padding: 8px;
+  border-radius: 10px; /* Rounded corners */
+}
